@@ -5,12 +5,3 @@ class Main extends React.Component {
     );
   }
 }
-
-let documentReady = () => {
-  React.render(
-    <Main />,
-    document.getElementById('react')
-  );
-};
-
-$(documentReady);
