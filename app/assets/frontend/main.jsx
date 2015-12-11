@@ -18,22 +18,12 @@ class Main extends React.Component {
     this._onChange = this._onChange.bind(this);
   }
 
-  addTweet(tweetToAdd) {
-    //$.post("/tweets", { tweet: tweetToAdd })
-    //  .success( savedTweet => {
-    //    let newTweetsList = this.state.tweetsList;
-    //    newTweetsList.unshift(savedTweet);
-    //    this.setState(this.formattedTweets(newTweetsList));
-    //  })
-    //  .error(error => console.log(error));
-  }
-
   componentDidMount() {
-    TweetStore.addChangeListener(this._onChange)
+    TweetStore.addChangeListener(this._onChange);
   }
 
   componentWillUnmount() {
-    TweetStore.removeChangeListener(this._onChange)
+    TweetStore.removeChangeListener(this._onChange);
   }
 
   _onChange() {
@@ -43,7 +33,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className="container">
-        <TweetBox sendTweet={this.addTweet.bind(this)} />
+        <TweetBox />
         <TweetList tweets={this.state.tweetsList} />
       </div>);
   }

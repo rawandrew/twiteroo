@@ -95,17 +95,6 @@
 	  }
 	
 	  _createClass(Main, [{
-	    key: "addTweet",
-	    value: function addTweet(tweetToAdd) {
-	      //$.post("/tweets", { tweet: tweetToAdd })
-	      //  .success( savedTweet => {
-	      //    let newTweetsList = this.state.tweetsList;
-	      //    newTweetsList.unshift(savedTweet);
-	      //    this.setState(this.formattedTweets(newTweetsList));
-	      //  })
-	      //  .error(error => console.log(error));
-	    }
-	  }, {
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
 	      _TweetStore2.default.addChangeListener(this._onChange);
@@ -126,7 +115,7 @@
 	      return React.createElement(
 	        "div",
 	        { className: "container" },
-	        React.createElement(_TweetBox2.default, { sendTweet: this.addTweet.bind(this) }),
+	        React.createElement(_TweetBox2.default, null),
 	        React.createElement(_TweetList2.default, { tweets: this.state.tweetsList })
 	      );
 	    }
