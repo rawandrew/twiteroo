@@ -2,12 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', github: 'rails/rails'
+gem 'rails'
 
 # Gems added for this project
-gem 'arel', github: 'rails/arel'
-gem 'rack', github: 'rack/rack'
 gem 'react-rails'
+gem 'devise', github: 'plataformatec/devise'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
