@@ -6,7 +6,7 @@ gem 'rails'
 
 # Gems added for this project
 gem 'react-rails'
-gem 'devise', github: 'plataformatec/devise'
+gem 'devise'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
