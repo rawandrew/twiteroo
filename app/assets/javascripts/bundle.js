@@ -108,13 +108,11 @@
 	  }, {
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
-	      console.log(6, "Main._onChange");
 	      _TweetStore2.default.addChangeListener(this._onChange);
 	    }
 	  }, {
 	    key: "componentWillUnmount",
 	    value: function componentWillUnmount() {
-	      console.log(5, "Main._onChange");
 	      _TweetStore2.default.removeChangeListener(this._onChange);
 	    }
 	  }, {
@@ -413,7 +411,6 @@
 	_dispatcher2.default.register(function (action) {
 	  switch (action.actionType) {
 	    case _constants2.default.RECEIVED_TWEETS:
-	      console.log(4, "TweetsStore");
 	      _tweets = action.rawTweets;
 	      TweetStore.emitChange();
 	      break;
@@ -1206,7 +1203,6 @@
 	
 	exports.default = {
 	  getAllTweets: function getAllTweets() {
-	    console.log(1, "TweetActions");
 	    _API2.default.getAllTweets();
 	  }
 	};
@@ -1232,7 +1228,6 @@
 	
 	exports.default = {
 	  getAllTweets: function getAllTweets() {
-	    console.log(2, "API.getAllTweets");
 	    $.get("/tweets").success(function (rawTweets) {
 	      return _ServerActions2.default.receivedTweets(rawTweets);
 	    }).error(function (error) {
@@ -1266,7 +1261,6 @@
 	
 	exports.default = {
 	  receivedTweets: function receivedTweets(rawTweets) {
-	    console.log(3, "ServerActions.receivedTweets");
 	    _dispatcher2.default.dispatch({
 	      actionType: _constants2.default.RECEIVED_TWEETS,
 	      rawTweets: rawTweets

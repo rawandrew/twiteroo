@@ -29,12 +29,10 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    console.log(6, "Main._onChange");
     TweetStore.addChangeListener(this._onChange)
   }
 
   componentWillUnmount() {
-    console.log(5, "Main._onChange");
     TweetStore.removeChangeListener(this._onChange)
   }
 
