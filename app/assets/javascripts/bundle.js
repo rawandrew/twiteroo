@@ -88,6 +88,17 @@
 	      this.setState({ tweetsList: newTweetsList });
 	    }
 	  }, {
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      var _this2 = this;
+	
+	      $.ajax("/tweets").success(function (data) {
+	        return _this2.setState({ tweetsList: data });
+	      }).error(function (error) {
+	        return console.log(eror);
+	      });
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      return React.createElement(
