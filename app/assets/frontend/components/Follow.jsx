@@ -33,7 +33,7 @@ export default class Follow extends React.Component {
   }
 
   followClasses(following) {
-    return "secondary-content btn-floating grey" + (following ? "green" : "grey");
+    return "secondary-content btn-floating " + (following ? "green" : "grey");
   }
 
   render() {

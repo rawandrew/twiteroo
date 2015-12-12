@@ -26352,7 +26352,7 @@
 	  }, {
 	    key: 'followClasses',
 	    value: function followClasses(following) {
-	      return "secondary-content btn-floating grey" + (following ? "green" : "grey");
+	      return "secondary-content btn-floating " + (following ? "green" : "grey");
 	    }
 	  }, {
 	    key: 'render',
