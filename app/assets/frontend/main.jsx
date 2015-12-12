@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import { Router, Route, Link } from 'react-router'
 
 import Index from './components/Index'
+import Follow from './components/Follow'
 
 class App extends React.Component {
   render() {
@@ -20,7 +21,8 @@ let documentReady = () => {
   if (reactNode) {
     ReactDOM.render(
       <Router component={App}>
-        <Router path="/" component={Index} />
+        <Route path="/" component={Index} />
+        <Route path="follow" component={Follow} />
       </Router>, reactNode);
   }
 };
