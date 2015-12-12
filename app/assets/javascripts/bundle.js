@@ -25101,7 +25101,7 @@
   \**************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
@@ -25112,6 +25112,8 @@
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 159);
 	
 	var _TweetBox = __webpack_require__(/*! ./TweetBox */ 211);
 	
@@ -25157,26 +25159,31 @@
 	  }
 	
 	  _createClass(Index, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      _TweetStore2.default.addChangeListener(this._onChange);
 	    }
 	  }, {
-	    key: "componentWillUnmount",
+	    key: 'componentWillUnmount',
 	    value: function componentWillUnmount() {
 	      _TweetStore2.default.removeChangeListener(this._onChange);
 	    }
 	  }, {
-	    key: "_onChange",
+	    key: '_onChange',
 	    value: function _onChange() {
 	      this.setState(getAppState());
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "container" },
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/follow' },
+	          'Follow interesting people'
+	        ),
 	        _react2.default.createElement(_TweetBox2.default, null),
 	        _react2.default.createElement(_TweetList2.default, { tweets: this.state.tweetsList })
 	      );
