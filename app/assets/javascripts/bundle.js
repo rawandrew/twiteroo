@@ -26342,6 +26342,15 @@
 	            'span',
 	            { className: 'title' },
 	            user.name
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'secondary-content btn-floating grey' },
+	            _react2.default.createElement(
+	              'i',
+	              { className: 'material-icons' },
+	              'person_pin'
+	            )
 	          )
 	        );
 	      });

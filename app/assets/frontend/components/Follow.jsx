@@ -34,6 +34,9 @@ export default class Follow extends React.Component {
         <li key={user.id} className="collection-item avatar">
           <img src={user.gravatar} className="circle" />
           <span className="title">{user.name}</span>
+          <a className="secondary-content btn-floating grey">
+            <i className="material-icons">person_pin</i>
+          </a>
         </li>
       );
     });
