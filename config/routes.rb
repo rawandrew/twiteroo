@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  resources :tweets
-  root 'home#index'
-  devise_for :users
 
+  root 'home#index'
+
+  devise_for :users
   get 'profile' => 'profile#index'
   patch 'profile' => 'profile#update'
+
+  resources :tweets
+  resources :followers do |r|
+    collection do
+      get 'random'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
