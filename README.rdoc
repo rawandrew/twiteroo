@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple experiment in using React and Flux as a frontend solution for a Rails powered backend.
 
-Things you may want to cover:
+Lessons learned:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+-creating a fast MVP backend using Rails is very easy and fast. The conventions used keep setup to a minimum.
+-using just React as a simple component based display solution is quite fast and intuitive. Too bad the Rails helpers aren't available.
+-using FLux to ensure the data binding and retrieving data from the backend API is quite laborious but seems to be worth all the extra work. You get a good separation of concerns and the Flux flow can become quite useful once you get used with its conventions.
