@@ -2,7 +2,7 @@
 
 <b>This is a simple experiment in using React and Flux as a frontend solution for a Rails powered backend.</b>
 
-===Lessons learned::
+===Lessons learned:
 
     - creating a fast MVP backend using Rails is very easy and fast.
     The conventions used keep setup to a minimum.
